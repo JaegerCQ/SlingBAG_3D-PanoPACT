@@ -254,13 +254,9 @@ python scripts/verify_package.py
 ./run.sh scripts/check_cuda.py --run
 ```
 
-当前代码已通过 46 项 CPU 测试，以及原规格和不同采集规格的两组 GPU 短流程。记录见 [验证说明](docs/VALIDATION.md)。短流程验证执行与数值正确性，不替代完整重建的质量评估。
-
-更多细节：[新数据格式](docs/NEW_DATA.md) · [pose000 数据说明](docs/DATA.md) · [算法说明](docs/METHOD.md) · [结果与限制](docs/RESULTS.md)。
-
 ## BibTeX / 原始 SlingBAG 论文引用
 
-以下条目沿用[原始 SlingBAG 仓库](https://github.com/JaegerCQ/SlingBAG)。本项目是基于其思路的变体，附带结果不应归为未经修改的原始算法结果。
+以下条目沿用[原始 SlingBAG 仓库](https://github.com/JaegerCQ/SlingBAG)。
 
 ```bibtex
 @article{li2025slingbag,
@@ -272,6 +268,3 @@ python scripts/verify_package.py
 }
 ```
 
-## License / 许可
-
-保留原始代码的 [MIT 许可](LICENSE)。附带实验数据没有单独提供再分发许可文本，代码许可不自动说明数据授权范围。`.gitignore` 和 `.gitattributes` 已为生成结果及 Git LFS 二进制文件做好设置；当前目录为本地项目，未创建远程仓库。
