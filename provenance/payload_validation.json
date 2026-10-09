@@ -1,0 +1,30 @@
+{
+  "device": "CPU",
+  "cuda_initialized": false,
+  "data_shape": [
+    1024,
+    4096
+  ],
+  "sensor_shape": [
+    1024,
+    3
+  ],
+  "volume_shape_zyx": [
+    400,
+    400,
+    400
+  ],
+  "checkpoint_point_count": 592864,
+  "checkpoint_point_tensors_bitwise_equal": true,
+  "copied_arrays_and_ply_byte_identical": true,
+  "final_full_mse": 199.567425518856,
+  "final_metrics_scope": "all 1024 sensors used for training and response fit; no held-out test",
+  "additional_cpu_checks": {
+    "manifest_files_verified": 22,
+    "normalized_signal_matches_single_global_gain": true,
+    "all_sensor_and_subset_mse_verified": true,
+    "checkpoint_config_record_metrics_consistent": true,
+    "kernel_coefficients_match": true,
+    "no_gpu_initialized": true
+  }
+}

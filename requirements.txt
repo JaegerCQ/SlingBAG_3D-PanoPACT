@@ -1,0 +1,8 @@
+# Install the PyTorch build matching your CUDA toolkit first; see README.md.
+torch==2.5.1
+triton==3.1.0; platform_system == 'Linux' and platform_machine == 'x86_64'
+numpy==1.26.4
+scipy==1.15.3
+matplotlib==3.10.8
+ninja>=1.11,<2
+packaging>=23

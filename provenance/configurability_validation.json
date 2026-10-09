@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-08T13:57:51.479514+00:00",
+  "status": "passed",
+  "feature": "Version 2 configurable inputs/acquisition, automatic per-frame global RMS gain, dynamic sensor count and time length.",
+  "cpu_tests": {
+    "passed": 46,
+    "failed": 0,
+    "command": "./run.sh -m unittest discover -s tests -v"
+  },
+  "normalization_regression": {
+    "data": "original included pose000",
+    "automatic_gain": 0.2612356995077035,
+    "original_gain": 0.2612356995077034,
+    "split_array_identical": {
+      "train": true,
+      "validation": true
+    },
+    "normalized_relative_l2_difference": 6.901402039894948e-08,
+    "max_absolute_difference": 6.103515625e-05
+  },
+  "nondefault_acquisition_gpu": {
+    "status": "passed",
+    "shape": [
+      24,
+      1024
+    ],
+    "checked_sensor_time_pairs": 72,
+    "sound_speed_m_s": 1480.0,
+    "sampling_frequency_hz": 20000000.0,
+    "relative_l2_to_independent_fp64": 2.144876353075453e-06,
+    "relative_difference_if_old_defaults_were_used": 0.9842114953680136,
+    "final_fir_taps": 15,
+    "final_ridge": 3.0,
+    "global_gain": 3.33185163583851,
+    "normalized_rms": 11.999999989353068,
+    "completed_stages": [
+      "prepare_data",
+      "coarse",
+      "split",
+      "fine",
+      "anneal",
+      "narrow",
+      "export_narrow",
+      "fit_response",
+      "response",
+      "export_validated",
+      "refit_all",
+      "export_final",
+      "calibrate_final",
+      "preview"
+    ],
+    "prepare_only_then_resume": true,
+    "scope": "Synthetic execution/numerical correctness only; not image quality."
+  },
+  "canonical_pose000_smoke": {
+    "sampling": {
+      "sensors": 1024,
+      "samples": 4096,
+      "sampling_frequency_hz": 40000000,
+      "sound_speed_m_s": 1500
+    },
+    "all_14_stages_completed": true,
+    "seconds": 56.982202019542456,
+    "code_sha256": {
+      "reconstruct.py": "879404ec61027c6abd4ac7cb6dd56eb4a969cd4d3ff19687eab306210a80da71",
+      "scripts/preview.py": "21710b020fbce41bd6ca8968aa50481cfc2a4e262c5e2bff5c4fc0fab27dc30f",
+      "scripts/_script_common.py": "091cbfcdc7597e5b32fd8b324af5895be856926ce9bfaef1cc8960e474739a89",
+      "scripts/prepare_data.py": "e6531429dc80d096483b67e782610623685d6c6336f01275c91e7365e7b6c8f6",
+      "slingbag/__init__.py": "1320ccf59bc07059952ef0f1b5d9b014d929bd6259c9e71ddda585d1fbd1bac0",
+      "slingbag/anneal_width.py": "0547029268344125a3fabc82bfd8bd8a6ac018b2148915055aed8aebfc94f425",
+      "slingbag/apply_final_response.py": "6a9eb036460908cb28fd3b7f4a91ed7b4ad3334e405335de19a51dbf13dd4706",
+      "slingbag/dataset.py": "92ec2d12efe6b24ea28b1afaaa619a79d57ca06e0d4bcf57448787e8a2ec1a1b",
+      "slingbag/export_random.py": "0652636058dd6ae01440ab1e0bf5f4d37105bb99c02b0a8cd2de397ccd5aeab4",
+      "slingbag/fit_random_response.py": "566d1ec95dc86ae8c6561ea3eea8cece5a336224500dd58eaea37f0ced413f1f",
+      "slingbag/io_utils.py": "bca273c2bcee82b545a757ee37eaa49e932ed53b99d4d6b6e1b73f6347dbffa6",
+      "slingbag/paths.py": "e01b778096b7761d05ef56ea48f320f8d00585ef275495dce03823f1673a089d",
+      "slingbag/random_prior.py": "9a1445fcc698f0ba56d56f76a702f5cbf1bdda388608811c78784d60a7d0677b",
+      "slingbag/rapid_forward.py": "7502c2e5326bf36bb3eee4bdfdf372587adb105f5bdb40edac7982801aeb2897",
+      "slingbag/split_random.py": "8d53b8f2ddd737103af757701099518417add7bf8e170ed8754dae0b4c696e49",
+      "slingbag/train_random.py": "4f48e2526cedcf358a90596413065d28248b3d46f594e8d12a6a066d5462c8d1",
+      "slingbag/voxelize_rapid.py": "fe369aa2ff423dcec2f461091e22caf2d255a4e82547431fe9cf0abec0c925d1",
+      "slingbag/csrc/gaussian.cpp": "936a257afbfd2c3fd8ffa34a7010cc40be7446946f238fd6b9218c1237c7f97d",
+      "slingbag/csrc/gaussian.cu": "a35737a917efe203fd3ae12938d41a3b44fa2c22ae5a18c1f7db3ddf94a670a0"
+    },
+    "scope": "4096 initial sources, 3 iterations/stage: execution regression, not a full quality reconstruction."
+  },
+  "resume": {
+    "prepare_only_then_full_resume": true,
+    "complete_run_skipped_verified_stages": 14,
+    "configuration_snapshot_mismatch_rejected_by_unit_test": true,
+    "source_and_prepared_data_tampering_rejected_by_unit_tests": true
+  },
+  "dynamic_data_environment_check": {
+    "success": true,
+    "checks": [
+      {
+        "check": "python",
+        "status": "PASS"
+      },
+      {
+        "check": "numpy",
+        "status": "PASS"
+      },
+      {
+        "check": "scipy",
+        "status": "PASS"
+      },
+      {
+        "check": "matplotlib",
+        "status": "PASS"
+      },
+      {
+        "check": "torch",
+        "status": "PASS"
+      },
+      {
+        "check": "ninja executable",
+        "status": "PASS"
+      },
+      {
+        "check": "c++ executable",
+        "status": "PASS"
+      },
+      {
+        "check": "nvcc executable",
+        "status": "PASS"
+      },
+      {
+        "check": "triton (optional voxelizer)",
+        "status": "PASS"
+      },
+      {
+        "check": "torch compiled CUDA",
+        "status": "PASS"
+      },
+      {
+        "check": "CUDA device",
+        "status": "SKIP"
+      },
+      {
+        "check": "signal_original",
+        "status": "PASS"
+      },
+      {
+        "check": "signal_normalized",
+        "status": "PASS"
+      },
+      {
+        "check": "sensor_locations",
+        "status": "PASS"
+      },
+      {
+        "check": "metadata global_gain",
+        "status": "PASS"
+      },
+      {
+        "check": "global_gain relationship",
+        "status": "PASS"
+      },
+      {
+        "check": "processed_original metadata shape",
+        "status": "PASS"
+      },
+      {
+        "check": "processed_original metadata RMS",
+        "status": "PASS"
+      },
+      {
+        "check": "normalized metadata shape",
+        "status": "PASS"
+      },
+      {
+        "check": "normalized metadata RMS",
+        "status": "PASS"
+      },
+      {
+        "check": "automatic RMS normalization",
+        "status": "PASS"
+      },
+      {
+        "check": "normalization source_rms",
+        "status": "PASS"
+      },
+      {
+        "check": "normalization achieved_rms",
+        "status": "PASS"
+      },
+      {
+        "check": "native physical grid",
+        "status": "PASS"
+      },
+      {
+        "check": "sampling and time units",
+        "status": "PASS"
+      },
+      {
+        "check": "sensor/RF row correspondence",
+        "status": "PASS"
+      },
+      {
+        "check": "sensor coordinate scale",
+        "status": "PASS"
+      },
+      {
+        "check": "coordinate units declaration",
+        "status": "PASS"
+      },
+      {
+        "check": "RF units and preprocessing",
+        "status": "PASS"
+      },
+      {
+        "check": "sensor split",
+        "status": "PASS"
+      }
+    ]
+  },
+  "compatibility": {
+    "legacy_metadata_dt_without_frequency": true,
+    "legacy_prepared_data_schema1": true,
+    "packaged_example_checkpoint_validation": true,
+    "all_22_original_payload_files_sha256_unchanged": true,
+    "default_split_arrays_identical": true,
+    "model_representation_and_training_objective_unchanged": true
+  },
+  "numerical_change_note": "Canonical raw data is float32; RMS and multiplication use float64 before final float32 storage. Original-frame gain agrees to floating precision; normalized data differs by ~6.9e-8 relative L2 from legacy float32 multiplication.",
+  "limits": [
+    "t0_seconds must remain zero.",
+    "Field of view remains +/-20mm and export grid400^3 at0.1mm.",
+    "MAT v7.3/HDF5 needs conversion to a supported matrix format.",
+    "No full million-source reconstruction was rerun for this configuration update."
+  ],
+  "cleanup": "Large synthetic and canonical smoke volumes/checkpoints are omitted from distribution; reports preserve verification results."
+}

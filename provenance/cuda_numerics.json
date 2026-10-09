@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "device": "cuda:0",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "compute_capability": [
+    8,
+    0
+  ],
+  "torch_version": "2.5.1+cu121",
+  "cuda_version": "12.1",
+  "fixture": {
+    "sensors": 3,
+    "sources": 4,
+    "time_samples": 512,
+    "voxel_dims_xyz": [
+      11,
+      12,
+      13
+    ]
+  },
+  "reference": "CPU float64 evaluated from the exact float32 CUDA input values; same fixed upstream gradient",
+  "gradient_units": "xyz and sigma derivatives scaled to millimetre parameters; pressure uses peak units",
+  "empty_source_forward_backward": "passed",
+  "comparisons": {
+    "untruncated/forward": {
+      "relative_l2_error": 2.321003678430847e-06,
+      "maximum_absolute_error": 1.63058760840884e-07,
+      "relative_l2_limit": 1e-05,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "untruncated/xyz_mm": {
+      "relative_l2_error": 2.8667310484096234e-06,
+      "maximum_absolute_error": 6.776677151931754e-07,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "untruncated/pressure": {
+      "relative_l2_error": 3.499625108727429e-06,
+      "maximum_absolute_error": 2.6160652928652883e-07,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "untruncated/sigma_mm": {
+      "relative_l2_error": 7.530177694087062e-06,
+      "maximum_absolute_error": 2.0214789508373777e-06,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "untruncated/frozen_xyz_pressure": {
+      "relative_l2_error": 3.499625108727429e-06,
+      "maximum_absolute_error": 2.6160652928652883e-07,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "untruncated/frozen_xyz_sigma_mm": {
+      "relative_l2_error": 7.530177694087062e-06,
+      "maximum_absolute_error": 2.0214789508373777e-06,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "cutoff6/forward": {
+      "relative_l2_error": 2.319902752640797e-06,
+      "maximum_absolute_error": 1.63058760840884e-07,
+      "relative_l2_limit": 1e-05,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "cutoff6/xyz_mm": {
+      "relative_l2_error": 2.865933076669605e-06,
+      "maximum_absolute_error": 6.725983886790576e-07,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "cutoff6/pressure": {
+      "relative_l2_error": 3.4518820599508307e-06,
+      "maximum_absolute_error": 2.538316010783359e-07,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "cutoff6/sigma_mm": {
+      "relative_l2_error": 7.4581133881749645e-06,
+      "maximum_absolute_error": 1.9993216928925178e-06,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "cutoff6/frozen_xyz_pressure": {
+      "relative_l2_error": 3.4518820599508307e-06,
+      "maximum_absolute_error": 2.538316010783359e-07,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "cutoff6/frozen_xyz_sigma_mm": {
+      "relative_l2_error": 7.4581133881749645e-06,
+      "maximum_absolute_error": 1.9993216928925178e-06,
+      "relative_l2_limit": 0.0001,
+      "atol": 5e-06,
+      "rtol": 0.0001
+    },
+    "voxelizer": {
+      "relative_l2_error": 1.6523840966643948e-07,
+      "maximum_absolute_error": 6.441217377251007e-07,
+      "relative_l2_limit": 2e-05,
+      "atol": 1e-05,
+      "rtol": 0.0001
+    }
+  },
+  "elapsed_seconds_including_possible_compilation": 1.5710920691490173,
+  "scope": "Synthetic first-order correctness check, not a training-quality or performance benchmark"
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "project": "SlingBAG_3D-PanoPACT",
+  "created_utc": "2026-10-08T15:10:53.582237+00:00",
+  "scope": "Distributed files not already listed in portable_manifest.json. This manifest excludes itself and runtime outputs. Regenerate it after intentional source modifications.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size_bytes": 287,
+      "sha256": "09ddb4614f125355bc4fc150f7fdc7c331db8d5686cba9202b10df527a7fc894"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 108,
+      "sha256": "903d572ff628ff5aed64ed492eee0fb2eb4416ccb5cbe5051b7400c0556666be"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1065,
+      "sha256": "f504d9cdbb3a11725022120f5e9795a6aa176ee728959892556ab582159f47ec"
+    },
+    {
+      "path": "NOTICE.md",
+      "size_bytes": 1363,
+      "sha256": "8c1d777c15c69265daf20a770d3d4936dde647b665a65ee7fab08a7381d9d7b0"
+    },
+    {
+      "path": "README.en.md",
+      "size_bytes": 16683,
+      "sha256": "f7ccff4619d1219ee5ea7b9ea57f51eefa4bb24cd402efca88e4b981f3a6f1b6"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 15278,
+      "sha256": "8da471df13f8a82f51a7cb60f051b0697c658cddf3c095a1b662d29acffc5935"
+    },
+    {
+      "path": "configs/pose000.json",
+      "size_bytes": 2530,
+      "sha256": "6490878639c465fe3b42c7ee55fd53dec7d834b4d5b6c59d7521a6239d96e9d2"
+    },
+    {
+      "path": "configs/smoke.json",
+      "size_bytes": 2542,
+      "sha256": "cb295a88be70b7d01bbd3dd701cb4f662cce0ee280923d58474b8ef0076c1beb"
+    },
+    {
+      "path": "docs/METHOD.md",
+      "size_bytes": 5618,
+      "sha256": "1b262218aa29bcff592db541585bc116b56287ebd2503d53c6e5816b994ce7dc"
+    },
+    {
+      "path": "docs/NEW_DATA.md",
+      "size_bytes": 9021,
+      "sha256": "0768448f9d5cb8d7ac9adcd199436ba61674da2d573fb887afe11782d45e9010"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "size_bytes": 5378,
+      "sha256": "9262603f5f9450b60263b363303bff3c0994d163e5a5fafb051ae9cf75499a1d"
+    },
+    {
+      "path": "docs/assets/reconstruction_preview.png",
+      "size_bytes": 261727,
+      "sha256": "a18a641bc97877076c0fc74a17126c73980150aeb008d0ebab7532ef01920447"
+    },
+    {
+      "path": "outputs/.gitkeep",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "provenance/configurability_validation.json",
+      "size_bytes": 7736,
+      "sha256": "f83f0b6f5f9116ff11cee2a80e0d359b2a349cdcb17affd66b4954de1db4ef98"
+    },
+    {
+      "path": "provenance/cuda_numerics.json",
+      "size_bytes": 3643,
+      "sha256": "7303a2224bb5dd8b59af66268094e98192841983f48985dbf7d1577a17c47f1d"
+    },
+    {
+      "path": "provenance/packaging_validation.json",
+      "size_bytes": 6299,
+      "sha256": "394ba26aa6c4f75e8c027cca72af24d80960159cfe0b73992583deba55d8afb7"
+    },
+    {
+      "path": "provenance/portable_manifest.json",
+      "size_bytes": 10780,
+      "sha256": "50da5db230a9704ee66fe61f773b38bf87c9234308e3df30808e1d22639c5de2"
+    },
+    {
+      "path": "reconstruct.py",
+      "size_bytes": 16071,
+      "sha256": "879404ec61027c6abd4ac7cb6dd56eb4a969cd4d3ff19687eab306210a80da71"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 241,
+      "sha256": "a47395ba3602305e57bda3529b682688090b9db78513db42396c7736474a624a"
+    },
+    {
+      "path": "run.sh",
+      "size_bytes": 743,
+      "sha256": "3893408c1601f73f2d8b44df649b1f286dfc095351ff4a9a3c92db50519f767b"
+    },
+    {
+      "path": "scripts/_script_common.py",
+      "size_bytes": 2103,
+      "sha256": "091cbfcdc7597e5b32fd8b324af5895be856926ce9bfaef1cc8960e474739a89"
+    },
+    {
+      "path": "scripts/check_cuda.py",
+      "size_bytes": 7458,
+      "sha256": "0414ac7cda9974a9cd5312e6ad9610030401dc07c2e047fc2a86387011dc8809"
+    },
+    {
+      "path": "scripts/check_environment.py",
+      "size_bytes": 23637,
+      "sha256": "c44c8a599c41e2632a72fd622f065be4e7ffad19bf8d9222eaa55277c0a4b7f6"
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "size_bytes": 1756,
+      "sha256": "e6531429dc80d096483b67e782610623685d6c6336f01275c91e7365e7b6c8f6"
+    },
+    {
+      "path": "scripts/preview.py",
+      "size_bytes": 6901,
+      "sha256": "21710b020fbce41bd6ca8968aa50481cfc2a4e262c5e2bff5c4fc0fab27dc30f"
+    },
+    {
+      "path": "scripts/verify_package.py",
+      "size_bytes": 1727,
+      "sha256": "e38ad8b29ea30c153e56d10e710d7771ee57845b2278619695a0bdf56349089a"
+    },
+    {
+      "path": "slingbag/__init__.py",
+      "size_bytes": 97,
+      "sha256": "1320ccf59bc07059952ef0f1b5d9b014d929bd6259c9e71ddda585d1fbd1bac0"
+    },
+    {
+      "path": "slingbag/anneal_width.py",
+      "size_bytes": 2202,
+      "sha256": "0547029268344125a3fabc82bfd8bd8a6ac018b2148915055aed8aebfc94f425"
+    },
+    {
+      "path": "slingbag/apply_final_response.py",
+      "size_bytes": 20054,
+      "sha256": "6a9eb036460908cb28fd3b7f4a91ed7b4ad3334e405335de19a51dbf13dd4706"
+    },
+    {
+      "path": "slingbag/csrc/gaussian.cpp",
+      "size_bytes": 500,
+      "sha256": "936a257afbfd2c3fd8ffa34a7010cc40be7446946f238fd6b9218c1237c7f97d"
+    },
+    {
+      "path": "slingbag/csrc/gaussian.cu",
+      "size_bytes": 7939,
+      "sha256": "a35737a917efe203fd3ae12938d41a3b44fa2c22ae5a18c1f7db3ddf94a670a0"
+    },
+    {
+      "path": "slingbag/dataset.py",
+      "size_bytes": 24116,
+      "sha256": "92ec2d12efe6b24ea28b1afaaa619a79d57ca06e0d4bcf57448787e8a2ec1a1b"
+    },
+    {
+      "path": "slingbag/export_random.py",
+      "size_bytes": 5674,
+      "sha256": "0652636058dd6ae01440ab1e0bf5f4d37105bb99c02b0a8cd2de397ccd5aeab4"
+    },
+    {
+      "path": "slingbag/fit_random_response.py",
+      "size_bytes": 17199,
+      "sha256": "566d1ec95dc86ae8c6561ea3eea8cece5a336224500dd58eaea37f0ced413f1f"
+    },
+    {
+      "path": "slingbag/io_utils.py",
+      "size_bytes": 3560,
+      "sha256": "bca273c2bcee82b545a757ee37eaa49e932ed53b99d4d6b6e1b73f6347dbffa6"
+    },
+    {
+      "path": "slingbag/paths.py",
+      "size_bytes": 1963,
+      "sha256": "e01b778096b7761d05ef56ea48f320f8d00585ef275495dce03823f1673a089d"
+    },
+    {
+      "path": "slingbag/random_prior.py",
+      "size_bytes": 16570,
+      "sha256": "9a1445fcc698f0ba56d56f76a702f5cbf1bdda388608811c78784d60a7d0677b"
+    },
+    {
+      "path": "slingbag/rapid_forward.py",
+      "size_bytes": 7786,
+      "sha256": "7502c2e5326bf36bb3eee4bdfdf372587adb105f5bdb40edac7982801aeb2897"
+    },
+    {
+      "path": "slingbag/split_random.py",
+      "size_bytes": 3605,
+      "sha256": "8d53b8f2ddd737103af757701099518417add7bf8e170ed8754dae0b4c696e49"
+    },
+    {
+      "path": "slingbag/train_random.py",
+      "size_bytes": 12168,
+      "sha256": "4f48e2526cedcf358a90596413065d28248b3d46f594e8d12a6a066d5462c8d1"
+    },
+    {
+      "path": "slingbag/voxelize_rapid.py",
+      "size_bytes": 11707,
+      "sha256": "fe369aa2ff423dcec2f461091e22caf2d255a4e82547431fe9cf0abec0c925d1"
+    },
+    {
+      "path": "tests/test_acquisition_pipeline.py",
+      "size_bytes": 9468,
+      "sha256": "9df46ddbc9fdc272b328f471b1c6a47f8d35c99dab1746d862c84750027ba8c7"
+    },
+    {
+      "path": "tests/test_calibration_recovery.py",
+      "size_bytes": 4744,
+      "sha256": "9560968925a3445296770bf7cde42595df15c53774d6803ccdd17cbc0a017a2e"
+    },
+    {
+      "path": "tests/test_dataset.py",
+      "size_bytes": 16407,
+      "sha256": "bf3e1fde3664fd6d445c715b00b8c4f58a6fdb5f6b67c330f8914f8964312251"
+    },
+    {
+      "path": "tests/test_environment_data.py",
+      "size_bytes": 6899,
+      "sha256": "7de6258a474650b9927d1481200ac02a84e6b7aa87982ec88a1f9d515e654614"
+    },
+    {
+      "path": "tests/test_numerics.py",
+      "size_bytes": 3961,
+      "sha256": "a35f1dac836f92ff6f23abfbe50617744af984266330657d88e29fc608333f5d"
+    },
+    {
+      "path": "tests/test_run_configuration.py",
+      "size_bytes": 3744,
+      "sha256": "1860732d51134c5312acef22f4fa320123b38fd9fa6502f1a4cba830a62525ce"
+    }
+  ]
+}

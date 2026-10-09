@@ -1,0 +1,362 @@
+{
+  "created_utc": "2026-10-08T12:29:59.371587+00:00",
+  "procedure": "Point-cloud training without FIR, followed by fixed-ridge shared response calibration on all 1024 sensors; sequential, not joint optimization",
+  "all_metrics_are_in_sample": true,
+  "configuration": {
+    "procedure": "Point-cloud training without FIR, followed by fixed-ridge shared response calibration on all 1024 sensors; sequential, not joint optimization",
+    "ridge_relative_strength": 10.0,
+    "ridge_absolute_strength": 62.84194020980738,
+    "ridge_center": "identity delta",
+    "ridge_selection": "Fixed at 10 from earlier tuning before this all-sensor fit; no search or selection here",
+    "sensor_count": 1024,
+    "independent_validation_sensor_count": 0,
+    "original_128_subset_role": "trained and response-fitted subset, not validation",
+    "time_sample_seconds": 2.5e-08,
+    "lags_samples": [
+      -20,
+      -19,
+      -18,
+      -17,
+      -16,
+      -15,
+      -14,
+      -13,
+      -12,
+      -11,
+      -10,
+      -9,
+      -8,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "response_kernel": "examples/pose000/final/response_kernel.npy",
+    "response_kernel_coefficients": [
+      -0.014196165837347507,
+      -0.011058248579502106,
+      -0.009291755966842175,
+      -0.01012379676103592,
+      -0.014534024521708488,
+      -0.023092593997716904,
+      -0.03581351414322853,
+      -0.052002739161252975,
+      -0.07010602951049805,
+      -0.08762817829847336,
+      -0.10125954449176788,
+      -0.1073402613401413,
+      -0.10267550498247147,
+      -0.08552026003599167,
+      -0.05638464540243149,
+      -0.018291063606739044,
+      0.02370346151292324,
+      0.063594289124012,
+      0.0957317128777504,
+      0.11588910967111588,
+      1.1218340396881104,
+      0.11342619359493256,
+      0.09243660420179367,
+      0.0622435137629509,
+      0.027395347133278847,
+      -0.007051584776490927,
+      -0.03641819581389427,
+      -0.05731000006198883,
+      -0.06823008507490158,
+      -0.06966222822666168,
+      -0.06361983716487885,
+      -0.05288201570510864,
+      -0.04022591933608055,
+      -0.02789311110973358,
+      -0.01737227477133274,
+      -0.00943934265524149,
+      -0.004327479284256697,
+      -0.0019067534012719989,
+      -0.00180684810038656,
+      -0.00347825326025486,
+      -0.006229372229427099
+    ],
+    "coefficient_storage_dtype": "float32; fit solved in float64",
+    "point_parameters_changed": false,
+    "volume_changed": false
+  },
+  "before": {
+    "full": {
+      "sensor_count": 1024,
+      "sample_count": 4194304,
+      "mse": 224.36504538979847,
+      "target_energy": 254.11888231474202,
+      "relative_l2": 0.9396348816867148,
+      "prediction_rms": 2.506829475848075,
+      "target_rms": 15.941106684127737,
+      "correlation": 0.45090785128822686,
+      "role": "all_1024_training_and_response_fit_sensors"
+    },
+    "original_train_subset": {
+      "sensor_count": 896,
+      "sample_count": 3670016,
+      "mse": 223.1440145263844,
+      "target_energy": 253.96439018917596,
+      "relative_l2": 0.9373595492371644,
+      "prediction_rms": 2.5294845672214654,
+      "target_rms": 15.93626023222437,
+      "correlation": 0.46164951301509094,
+      "role": "original_896_subset_also_used_for_training_and_response_fit"
+    },
+    "original_validation_subset": {
+      "sensor_count": 128,
+      "sample_count": 524288,
+      "mse": 232.91226143369792,
+      "target_energy": 255.20032719370343,
+      "relative_l2": 0.9553347220193448,
+      "prediction_rms": 2.342115910275343,
+      "target_rms": 15.974990678986433,
+      "correlation": 0.37115281271892975,
+      "role": "original_128_subset_also_used_for_training_and_response_fit_NOT_validation"
+    }
+  },
+  "after": {
+    "full": {
+      "sensor_count": 1024,
+      "sample_count": 4194304,
+      "mse": 199.567425518856,
+      "target_energy": 254.11888231474202,
+      "relative_l2": 0.886189008555371,
+      "prediction_rms": 4.474036607688699,
+      "target_rms": 15.941106684127737,
+      "correlation": 0.5227658135402692,
+      "role": "all_1024_training_and_response_fit_sensors"
+    },
+    "original_train_subset": {
+      "sensor_count": 896,
+      "sample_count": 3670016,
+      "mse": 197.57000508406938,
+      "target_energy": 253.96439018917596,
+      "relative_l2": 0.8820111849442108,
+      "prediction_rms": 4.532898953718847,
+      "target_rms": 15.93626023222437,
+      "correlation": 0.5325599825500791,
+      "role": "original_896_subset_also_used_for_training_and_response_fit"
+    },
+    "original_validation_subset": {
+      "sensor_count": 128,
+      "sample_count": 524288,
+      "mse": 213.54936856236196,
+      "target_energy": 255.20032719370343,
+      "relative_l2": 0.9147628784035959,
+      "prediction_rms": 4.038046317605927,
+      "target_rms": 15.974990678986433,
+      "correlation": 0.44922334638925465,
+      "role": "original_128_subset_also_used_for_training_and_response_fit_NOT_validation"
+    }
+  },
+  "full_mse_reduction_fraction": 0.11052354357542893,
+  "filter": {
+    "coefficients_in_increasing_lag_order": [
+      -0.014196165837347507,
+      -0.011058248579502106,
+      -0.009291755966842175,
+      -0.01012379676103592,
+      -0.014534024521708488,
+      -0.023092593997716904,
+      -0.03581351414322853,
+      -0.052002739161252975,
+      -0.07010602951049805,
+      -0.08762817829847336,
+      -0.10125954449176788,
+      -0.1073402613401413,
+      -0.10267550498247147,
+      -0.08552026003599167,
+      -0.05638464540243149,
+      -0.018291063606739044,
+      0.02370346151292324,
+      0.063594289124012,
+      0.0957317128777504,
+      0.11588910967111588,
+      1.1218340396881104,
+      0.11342619359493256,
+      0.09243660420179367,
+      0.0622435137629509,
+      0.027395347133278847,
+      -0.007051584776490927,
+      -0.03641819581389427,
+      -0.05731000006198883,
+      -0.06823008507490158,
+      -0.06966222822666168,
+      -0.06361983716487885,
+      -0.05288201570510864,
+      -0.04022591933608055,
+      -0.02789311110973358,
+      -0.01737227477133274,
+      -0.00943934265524149,
+      -0.004327479284256697,
+      -0.0019067534012719989,
+      -0.00180684810038656,
+      -0.00347825326025486,
+      -0.006229372229427099
+    ],
+    "coefficient_sum_dc_gain": 0.4490826439578086,
+    "coefficient_l2_norm": 1.1817809898523524,
+    "distance_from_identity_l2": 0.3910731755057928,
+    "peak_absolute_coefficient": 1.1218340396881104,
+    "peak_coefficient_lag_samples": 0,
+    "peak_coefficient_lag_ns": 0.0,
+    "maximum_frequency_response_magnitude": 2.4236280534314663
+  },
+  "float32_coefficient_max_rounding_error": 5.262590141441592e-08,
+  "normal_equations": {
+    "fft_size": 8192,
+    "sensor_batch": 64,
+    "finite_window_boundary_correction_frobenius": 0.0,
+    "method": "FFT auto/cross correlation plus exact finite-output-window Gram correction; no [S*T,41] matrix is constructed.",
+    "fitting_sensor_rows": "all rows 0..1023, without validation-based selection",
+    "diagonal_mean": 6.284194020980738,
+    "condition_number": 1.7983851962672819,
+    "relative_residual": 2.0562071133751881e-16
+  },
+  "numerical_checks": {
+    "dense_design": {
+      "status": "passed",
+      "fixture": "Dense design matrix with nonzero boundaries, long FIR and identity-only cases",
+      "cases": [
+        {
+          "sensors": 3,
+          "time_points": 57,
+          "half_width": 3,
+          "gram_max_absolute_difference": 5.684341886080802e-14,
+          "cross_max_absolute_difference": 5.10702591327572e-15
+        },
+        {
+          "sensors": 3,
+          "time_points": 31,
+          "half_width": 20,
+          "gram_max_absolute_difference": 2.842170943040401e-14,
+          "cross_max_absolute_difference": 8.43769498715119e-15
+        },
+        {
+          "sensors": 3,
+          "time_points": 31,
+          "half_width": 0,
+          "gram_max_absolute_difference": 2.842170943040401e-14,
+          "cross_max_absolute_difference": 1.7763568394002505e-15
+        }
+      ]
+    },
+    "direct_convolution": "passed",
+    "old_acoustic_prediction_and_metrics": "passed",
+    "checkpoint_point_parameters": "bitwise unchanged",
+    "immutable_file_hashes": "unchanged"
+  },
+  "historical_inputs": {
+    "historical:SlingBAG_random_pose000/results/final/acoustic_signal_normalized.npy": {
+      "sha256": "a3a99e44e6ba97b50a2f36d91deb81b2a15e408ab29c36cff28b5a98cb67f406",
+      "bytes": 16777344
+    },
+    "historical:SlingBAG_random_pose000/data/signal_normalized.npy": {
+      "sha256": "752539a7193d2368e4c02ba23d09c91b83581e2df2c3ad6cdac59474e6c4f9f3",
+      "bytes": 16777344
+    },
+    "historical:SlingBAG_random_pose000/data/split.npz": {
+      "sha256": "bf1a2bc655ab09aa7195afdecbc6e39b4151094a08ab99ae3f366e9a205390d1",
+      "bytes": 8708
+    },
+    "historical:SlingBAG_random_pose000/data/metadata.json": {
+      "sha256": "a021b21859f42a3d7a0cb20b68f49a4136d62d16cc6cd47f3e5d7d1a46320287",
+      "bytes": 2838
+    },
+    "historical:SlingBAG_random_pose000/results/final/checkpoint.pt": {
+      "sha256": "a3ef889f718afbc4a9bc09a86ed376cb72b7e18deb1fb68eb92071d190912f5f",
+      "bytes": 11862441
+    },
+    "historical:SlingBAG_random_pose000/results/final/metrics.json": {
+      "sha256": "9fb87bfcb6fc46873f3ee3da4db26ebfa3da9346a2bdee402d148e7259160d49",
+      "bytes": 6129
+    },
+    "historical:SlingBAG_random_pose000/results/final/predicted_signal_normalized.npy": {
+      "sha256": "a3a99e44e6ba97b50a2f36d91deb81b2a15e408ab29c36cff28b5a98cb67f406",
+      "bytes": 16777344
+    },
+    "historical:SlingBAG_random_pose000/results/final/predicted_signal_original_units.npy": {
+      "sha256": "9be7fee853a2561a7ca700a1e4c1b478fb72dd426d8b5040d49f9c6141a4885c",
+      "bytes": 16777344
+    }
+  },
+  "historical_unchanged_file_sha256": {
+    "acoustic_signal_normalized.npy": "a3a99e44e6ba97b50a2f36d91deb81b2a15e408ab29c36cff28b5a98cb67f406",
+    "point_cloud.ply": "aa7f899661b4817c25f4d10873c1dbb41ab7fb3069d9444a0c3ea3655aad50a5",
+    "volume_zyx.npy": "03c4ed36f994857de4ec19f8ec427a21117309f0dc4025f2849bbd2c7d715f51",
+    "volume_zyx.mat": "d9debc75aededcd7f1cf266cf0e28f9305f557bf7d6f9e4bad12463b6ada2440"
+  },
+  "historical_backups": {
+    "metrics_acoustic.json": "metrics.json",
+    "checkpoint_acoustic.pt": "checkpoint.pt",
+    "predicted_signal_normalized_acoustic.npy": "predicted_signal_normalized.npy",
+    "predicted_signal_original_units_acoustic.npy": "predicted_signal_original_units.npy"
+  },
+  "rerun_from_acoustic_backups": false,
+  "historical_implementation": {
+    "device": "CPU",
+    "torch_cuda_initialized": false,
+    "script_sha256": "5c7dc90f7a5678b693c957e14b1c791c31f883e12062bd63f2b3cb5b132880b1",
+    "fir_math_script_sha256": "2dbe378f6653096ecb41f8fc638a916a044420132991b7eb9818ca791051fc9b"
+  },
+  "interpretation": [
+    "The fitted shared FIR is empirical, not a measured instrument impulse response.",
+    "All final fit metrics are in-sample. Earlier reserved-sensor tuning results must be reported separately.",
+    "No point-cloud or voxel-volume quality claim follows from this response-fit MSE reduction."
+  ],
+  "historical_outputs": {
+    "response_kernel.npy": {
+      "sha256": "5ccf6216660d7f7a1ba926dcb1bad3cf704a5a0be3f3434b86b3de1ed7b34aec"
+    },
+    "predicted_signal_normalized.npy": {
+      "sha256": "60c5a8e350106d37e7e9e23242a7c460ac887f571529a1df7be6476a28ca19d8"
+    },
+    "predicted_signal_original_units.npy": {
+      "sha256": "b5b667ad66d9dbdfef128c150021f4cee3ca0e39ff9d301858157a194885a4dc"
+    },
+    "checkpoint.pt": {
+      "sha256": "59d90aa2a59239e8a95773ac0df77d8a15b98fa702fe8f40f87a320c59b2bd21"
+    },
+    "config.json": {
+      "sha256": "b9e93826897df1dc176616963ebd307654dc3626bd9d6949b0f1bc446452fccb"
+    },
+    "record.json": {
+      "sha256": "964f382c07b045acea9cba55a346b74175e35b993565f919114010eaaf9f4baf"
+    },
+    "metrics.json": {
+      "sha256": "364c5ae00192b099637c8e139b35a1ab0536e412833cf686292d5a0ec90e0fc1"
+    }
+  },
+  "historical_acoustic_backup_sha256": {
+    "metrics_acoustic.json": "9fb87bfcb6fc46873f3ee3da4db26ebfa3da9346a2bdee402d148e7259160d49",
+    "checkpoint_acoustic.pt": "a3ef889f718afbc4a9bc09a86ed376cb72b7e18deb1fb68eb92071d190912f5f",
+    "predicted_signal_normalized_acoustic.npy": "a3a99e44e6ba97b50a2f36d91deb81b2a15e408ab29c36cff28b5a98cb67f406",
+    "predicted_signal_original_units_acoustic.npy": "9be7fee853a2561a7ca700a1e4c1b478fb72dd426d8b5040d49f9c6141a4885c"
+  },
+  "elapsed_cpu_wall_seconds": 2.7883647736161947,
+  "portability_note": "historical_* sections retain hashes of the original run artifacts, including unbundled files. They are not hashes of renamed/metadata-rewritten package files; use provenance/portable_manifest.json for this package."
+}

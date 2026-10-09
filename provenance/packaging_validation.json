@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-08T13:18:29.453929+00:00",
+  "status": "passed",
+  "scope": "Standalone packaging and numerical/execution checks; full million-source quality reconstruction was preserved, not retrained during packaging.",
+  "source_cuda_sha256": {
+    "gaussian.cpp": "936a257afbfd2c3fd8ffa34a7010cc40be7446946f238fd6b9218c1237c7f97d",
+    "gaussian.cu": "a35737a917efe203fd3ae12938d41a3b44fa2c22ae5a18c1f7db3ddf94a670a0"
+  },
+  "scientific_core_comparison": {
+    "rapid_forward.py:gaussian_reference": "AST identical",
+    "rapid_forward.py:gaussian_forward": "AST identical",
+    "rapid_forward.py:_GaussianCUDA": "AST identical",
+    "voxelize_rapid.py:gaussian_voxelize": "AST identical",
+    "voxelize_rapid.py:_source_boxes": "AST identical",
+    "random_prior.py:random_initialize": "AST identical",
+    "random_prior.py:GaussianGridField": "AST identical",
+    "random_prior.py:spatial_penalty": "AST identical",
+    "fit_random_response.py:normal_equations": "AST identical",
+    "fit_random_response.py:check_normal_equations": "AST identical"
+  },
+  "cpu_unittests": {
+    "passed": 10,
+    "failed": 0,
+    "command": "./run.sh -m unittest discover -s tests -v"
+  },
+  "cuda_numerics": {
+    "status": "passed",
+    "report": "provenance/cuda_numerics.json"
+  },
+  "relocation": {
+    "status": "passed",
+    "working_directory": "outside repository",
+    "copied_without_symlinks": true,
+    "data_environment_overrides_cleared": true,
+    "cpu_environment_checks_passed": 25,
+    "commands": [
+      "reconstruct.py --config configs/smoke.json --dry-run",
+      "scripts/check_environment.py",
+      "scripts/verify_package.py --manifest provenance/portable_manifest.json",
+      "-m slingbag.export_random --help"
+    ],
+    "note": "Temporary copied tree was removed after successful checks."
+  },
+  "smoke": {
+    "config": "configs/smoke.json",
+    "initial_sources": 4096,
+    "candidate_sources_after_split": 4544,
+    "iterations_per_training_stage": 3,
+    "completed_stages": [
+      "coarse",
+      "split",
+      "fine",
+      "anneal",
+      "narrow",
+      "export_narrow",
+      "fit_response",
+      "response",
+      "export_validated",
+      "refit_all",
+      "export_final",
+      "calibrate_final",
+      "preview"
+    ],
+    "seconds_excluding_first_compilation": 56.800066608935595,
+    "per_stage_seconds": {
+      "coarse": 6.286744695156813,
+      "split": 2.1188665349036455,
+      "fine": 6.1718334928154945,
+      "anneal": 2.24371575191617,
+      "narrow": 5.792037516832352,
+      "export_narrow": 4.87274238280952,
+      "fit_response": 1.5251377504318953,
+      "response": 5.905556831508875,
+      "export_validated": 5.019380588084459,
+      "refit_all": 5.9836732391268015,
+      "export_final": 4.916800316423178,
+      "calibrate_final": 4.384883368387818,
+      "preview": 1.5786941405385733
+    },
+    "code_sha256": {
+      "reconstruct.py": "6bf2210d7954e4cdd7b2f1caebac4a335af72e945e032f1209978a0551e9edcd",
+      "scripts/preview.py": "21710b020fbce41bd6ca8968aa50481cfc2a4e262c5e2bff5c4fc0fab27dc30f",
+      "scripts/_script_common.py": "091cbfcdc7597e5b32fd8b324af5895be856926ce9bfaef1cc8960e474739a89",
+      "slingbag/__init__.py": "1320ccf59bc07059952ef0f1b5d9b014d929bd6259c9e71ddda585d1fbd1bac0",
+      "slingbag/anneal_width.py": "0547029268344125a3fabc82bfd8bd8a6ac018b2148915055aed8aebfc94f425",
+      "slingbag/apply_final_response.py": "2eb011c70a0ed730072a8ba447269dcf4b22144d36fdf60cff0a2ae24e5a9e94",
+      "slingbag/export_random.py": "5896ec32c826d96d2345a22b177be9288e5c4c0ea7d41826f2ca8afdaff37ba9",
+      "slingbag/fit_random_response.py": "b6e7960522b8ef8c8d28e07ae6bbbbba31e16ce683e857ab1c845c3fe347fe06",
+      "slingbag/io_utils.py": "bca273c2bcee82b545a757ee37eaa49e932ed53b99d4d6b6e1b73f6347dbffa6",
+      "slingbag/paths.py": "e01b778096b7761d05ef56ea48f320f8d00585ef275495dce03823f1673a089d",
+      "slingbag/random_prior.py": "9a1445fcc698f0ba56d56f76a702f5cbf1bdda388608811c78784d60a7d0677b",
+      "slingbag/rapid_forward.py": "7502c2e5326bf36bb3eee4bdfdf372587adb105f5bdb40edac7982801aeb2897",
+      "slingbag/split_random.py": "8d53b8f2ddd737103af757701099518417add7bf8e170ed8754dae0b4c696e49",
+      "slingbag/train_random.py": "7b7a6b4f562ae7576b5ad70f734b3506d40fe87d19a31d37bd25a8f2ee1d231d",
+      "slingbag/voxelize_rapid.py": "fe369aa2ff423dcec2f461091e22caf2d255a4e82547431fe9cf0abec0c925d1",
+      "slingbag/csrc/gaussian.cpp": "936a257afbfd2c3fd8ffa34a7010cc40be7446946f238fd6b9218c1237c7f97d",
+      "slingbag/csrc/gaussian.cu": "a35737a917efe203fd3ae12938d41a3b44fa2c22ae5a18c1f7db3ddf94a670a0"
+    },
+    "data_sha256": {
+      "signal_original.npy": "1280872186f5c85cf7f1adc9600ef765e2e8a184504dc177e38a9de9581d6de5",
+      "signal_normalized.npy": "752539a7193d2368e4c02ba23d09c91b83581e2df2c3ad6cdac59474e6c4f9f3",
+      "sensor_locations.npy": "7b5cd692324834ac8816e3b546620ca566383e2a4a492ff4681f865a60cd7495",
+      "split.npz": "bf1a2bc655ab09aa7195afdecbc6e39b4151094a08ab99ae3f366e9a205390d1",
+      "metadata.json": "3c39eb87bb53427167a70b3a7458f8faea0946cc6469d6828b1c0d711fabec63"
+    },
+    "all_stages_completed": true,
+    "resume_verified_and_skipped_all_stages": true,
+    "scope": "Execution check only, not reconstruction quality."
+  },
+  "example_preserved": {
+    "report": "provenance/payload_validation.json",
+    "nonzero_gaussians": 592864,
+    "checkpoint_xyz_pressure_sigma_bitwise_identical": true
+  },
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "triton": "3.1.0",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.8",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "nvcc": "12.2",
+    "working_ninja": "1.10.1",
+    "note": "Toolkit12.2 versus PyTorch CUDA12.1 minor-version difference reported; compilation and numerical tests succeeded."
+  },
+  "cleanup": "Large smoke outputs, build products and Python caches removed after collecting this report; these are reproducible and not distributed.",
+  "limits": [
+    "No fresh dependency installation in an empty machine was attempted.",
+    "Other GPU models and full-training reproduction on other machines were not tested.",
+    "The 128 reserved sensors were used for model tuning; final example uses all sensors for fitting."
+  ]
+}

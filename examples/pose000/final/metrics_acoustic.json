@@ -1,0 +1,157 @@
+{
+  "configuration": {
+    "historical_training_output": "historical:SlingBAG_random_pose000/results/refit_all",
+    "balls": 1000000,
+    "seed": 1013,
+    "sigma_mm": 0.25,
+    "initial_pressure": 4.0,
+    "iterations": 500,
+    "batch_sensors": 128,
+    "field_grid": 288,
+    "prior_weight": 1.5,
+    "sparsity_weight": 0.02,
+    "curvature_weight": 2.0,
+    "pressure_lr": 0.05,
+    "adam_eps": 1e-10,
+    "position_lr": 0.002,
+    "geometry_start": 100,
+    "max_shift_mm": 0.1,
+    "historical_initial_checkpoint": "historical:SlingBAG_random_pose000/results/random_narrow_init/initial.pt",
+    "all_sensors": true,
+    "response_kernel": null,
+    "eval_every": 100,
+    "random_only_ancestry": true,
+    "initialization": {
+      "type": "continuation of random-only point cloud",
+      "historical_path": "historical:SlingBAG_random_pose000/results/random_narrow_init/initial.pt",
+      "sha256": "913280a56a3d1a6a1b05e86d867f1e95ecf8124a087c37c924f560c817cf9e6a"
+    },
+    "ball_count": 1420000,
+    "sigma_values_m": [
+      9.999999747378752e-05,
+      0.0002500000118743628
+    ],
+    "pressure_parameter_unit": 100.0,
+    "position_parameter_unit_m": 0.0001,
+    "field_spacing_m": 0.0001388888888888889,
+    "field_amplitude_scale": 100.0,
+    "field_modules": [
+      {
+        "model": "Common fixed-sigma CIC mass deposition plus separable normalized Gaussian smoothing",
+        "sigma_m": 9.999999747378752e-05,
+        "filter_sigma_m": 8.237098347492168e-05,
+        "dims_xyz": [
+          288,
+          288,
+          288
+        ],
+        "axis_order": "ZYX",
+        "spacing_m": 0.0001388888888888889,
+        "voxel_origin_xyz_m": [
+          -0.019930555555555556,
+          -0.019930555555555556,
+          -0.019930555555555556
+        ],
+        "halo_voxels": 4,
+        "padded_dims_xyz": [
+          296,
+          296,
+          296
+        ],
+        "kernel_radius_voxels": 3,
+        "requested_axis_cutoff_sigma": 4.0,
+        "kernel_support": "Each axis uses integer offsets through ceil(cutoff*filter_sigma/spacing), inclusive",
+        "cic_variance_compensation": true,
+        "compensated_variance_m2": 3.2150205761316874e-09,
+        "mass_rule": "q=(2*pi)^1.5*P*sigma^3; deposit q/spacing^3; normalize each 1D Gaussian kernel to sum 1",
+        "field_units": "Same pressure units as source peak P",
+        "approximation": "CIC compensation matches the random-phase mean second moment only, not exact Gaussians",
+        "boundary": "Deposit and smooth on halo, then crop ROI; Gaussian pressure outside ROI is excluded",
+        "sigma_policy": "Common fixed sigma per instance; distinct fixed-width bins require separate fields summed together"
+      },
+      {
+        "model": "Common fixed-sigma CIC mass deposition plus separable normalized Gaussian smoothing",
+        "sigma_m": 0.0002500000118743628,
+        "filter_sigma_m": 0.00024348508241995006,
+        "dims_xyz": [
+          288,
+          288,
+          288
+        ],
+        "axis_order": "ZYX",
+        "spacing_m": 0.0001388888888888889,
+        "voxel_origin_xyz_m": [
+          -0.019930555555555556,
+          -0.019930555555555556,
+          -0.019930555555555556
+        ],
+        "halo_voxels": 9,
+        "padded_dims_xyz": [
+          306,
+          306,
+          306
+        ],
+        "kernel_radius_voxels": 8,
+        "requested_axis_cutoff_sigma": 4.0,
+        "kernel_support": "Each axis uses integer offsets through ceil(cutoff*filter_sigma/spacing), inclusive",
+        "cic_variance_compensation": true,
+        "compensated_variance_m2": 3.2150205761316874e-09,
+        "mass_rule": "q=(2*pi)^1.5*P*sigma^3; deposit q/spacing^3; normalize each 1D Gaussian kernel to sum 1",
+        "field_units": "Same pressure units as source peak P",
+        "approximation": "CIC compensation matches the random-phase mean second moment only, not exact Gaussians",
+        "boundary": "Deposit and smooth on halo, then crop ROI; Gaussian pressure outside ROI is excluded",
+        "sigma_policy": "Common fixed sigma per instance; distinct fixed-width bins require separate fields summed together"
+      }
+    ],
+    "prior": "CIC Gaussian field: isotropic TV + curvature; no image target",
+    "reference_images_used_for_training": false,
+    "training_sensor_count": 1024,
+    "reserved_sensor_count": 0,
+    "validation_used_for_tuning": true,
+    "validation_used_in_training": true,
+    "response_kernel_coefficients": null,
+    "selection": "minimum reserved-sensor MSE; when all_sensors, use fixed final iteration",
+    "input_files": {
+      "data/pose000/signal_normalized.npy": "752539a7193d2368e4c02ba23d09c91b83581e2df2c3ad6cdac59474e6c4f9f3",
+      "data/pose000/sensor_locations.npy": "7b5cd692324834ac8816e3b546620ca566383e2a4a492ff4681f865a60cd7495",
+      "data/pose000/split.npz": "bf1a2bc655ab09aa7195afdecbc6e39b4151094a08ab99ae3f366e9a205390d1"
+    }
+  },
+  "record": {
+    "step": 500,
+    "train_full_mse": 224.36504457511637,
+    "reserved_or_original_subset_mse": 232.9122619043112,
+    "subset_is_trained": true,
+    "spatial_penalty": 0.057659611105918884,
+    "tv": 0.02018790878355503,
+    "curvature": 0.018735850229859352,
+    "mean_field": 2.8238933086395264,
+    "nonzero_balls": 592864,
+    "max_peak_pressure": 5220.75,
+    "ball_count": 1420000,
+    "elapsed_seconds": 214.79396340809762
+  },
+  "historical_source_checkpoint": "historical:SlingBAG_random_pose000/results/refit_all/selected.pt",
+  "historical_source_checkpoint_sha256": "d622ff12c153912d69caa8e993706dc88682ec419c5d0ae6d748c08f9643387d",
+  "candidate_balls": 1420000,
+  "nonzero_balls": 592864,
+  "full": {
+    "mse": 224.36504538979847,
+    "relative_l2": 0.9396348816867152,
+    "correlation": 0.45090785128822236
+  },
+  "original_train_subset": {
+    "mse": 223.1440145263844,
+    "relative_l2": 0.9373595492371638,
+    "correlation": 0.4616495130150928
+  },
+  "original_validation_subset": {
+    "mse": 232.91226143369792,
+    "relative_l2": 0.955334722019345,
+    "correlation": 0.3711528127189287
+  },
+  "all_sensors_trained": true,
+  "scope": "Reserved sensors were used for tuning. In all-sensor runs they are also trained.",
+  "elapsed_seconds": 6.766881184652448,
+  "portability_note": "historical_* sections retain hashes of the original run artifacts, including unbundled files. They are not hashes of renamed/metadata-rewritten package files; use provenance/portable_manifest.json for this package."
+}

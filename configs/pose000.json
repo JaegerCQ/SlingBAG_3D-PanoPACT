@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "description": "Full pose000 protocol: IID random initialization, field regularization, conservative splitting, width annealing, response diagnostic and all-sensor refit.",
+  "input": {
+    "signal": "data/pose000/signal_original.npy",
+    "sensors": "data/pose000/sensor_locations.npy",
+    "signal_key": null,
+    "sensors_key": null,
+    "signal_layout": "sensor_time",
+    "sensor_layout": "sensor_xyz",
+    "coordinate_unit": "m",
+    "frame": "group03_pose000"
+  },
+  "acquisition": {
+    "sound_speed_m_s": 1500.0,
+    "sampling_frequency_hz": 40000000.0,
+    "samples": null,
+    "t0_seconds": 0.0
+  },
+  "normalization": {
+    "target_rms": 15.941105800921543
+  },
+  "sensor_split": {
+    "file": null,
+    "validation_fraction": 0.125,
+    "seed": 20261008
+  },
+  "default_output": "outputs/pose000",
+  "seed": 1013,
+  "initialization": {
+    "balls": 1000000,
+    "sigma_mm": 0.25,
+    "initial_pressure": 4.0
+  },
+  "shared_training": {
+    "batch_sensors": 128,
+    "sparsity_weight": 0.02,
+    "curvature_weight": 2.0,
+    "pressure_lr": 0.03,
+    "adam_eps": 1e-10,
+    "eval_every": 100
+  },
+  "training": {
+    "coarse": {
+      "iterations": 700,
+      "field_grid": 160,
+      "prior_weight": 1.0,
+      "geometry_start": 300,
+      "position_lr": 0.003,
+      "max_shift_mm": 0.15
+    },
+    "fine": {
+      "iterations": 700,
+      "field_grid": 200,
+      "prior_weight": 1.5,
+      "geometry_start": 100,
+      "position_lr": 0.002,
+      "max_shift_mm": 0.1
+    },
+    "narrow": {
+      "iterations": 500,
+      "field_grid": 288,
+      "prior_weight": 1.5,
+      "geometry_start": 100,
+      "position_lr": 0.002,
+      "max_shift_mm": 0.1,
+      "pressure_lr": 0.05
+    },
+    "response": {
+      "iterations": 200,
+      "field_grid": 288,
+      "prior_weight": 1.5,
+      "geometry_start": 50,
+      "position_lr": 0.001,
+      "max_shift_mm": 0.05,
+      "pressure_lr": 0.025,
+      "eval_every": 50
+    },
+    "refit_all": {
+      "iterations": 500,
+      "field_grid": 288,
+      "prior_weight": 1.5,
+      "geometry_start": 100,
+      "position_lr": 0.002,
+      "max_shift_mm": 0.1,
+      "pressure_lr": 0.05
+    }
+  },
+  "split": {
+    "top": 60000,
+    "ratio": 0.6
+  },
+  "anneal": {
+    "fine_cutoff_mm": 0.2,
+    "new_sigma_mm": 0.1
+  },
+  "response_fit": {
+    "half_width": 20,
+    "ridge": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ]
+  },
+  "final_response_ridge": 10.0,
+  "response_diagnostic": true,
+  "export_mat": false
+}

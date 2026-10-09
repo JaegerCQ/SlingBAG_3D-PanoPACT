@@ -1,0 +1,113 @@
+{
+  "frame": "group03_pose000",
+  "global_gain": 0.2612356995077034,
+  "rule": "signal_normalized = signal_original * simulation_global_rms / measured_global_rms",
+  "normalized": {
+    "shape": [
+      1024,
+      4096
+    ],
+    "min": -566.3265380859375,
+    "max": 579.3485717773438,
+    "mean": -0.00015912186391929355,
+    "rms": 15.941106684127737,
+    "abs_percentiles": {
+      "50": 1.1462700963020325,
+      "90": 10.67276239395144,
+      "95": 20.567570114135734,
+      "99": 63.21646755218485,
+      "99.5": 92.86517295837376,
+      "99.9": 192.48237702941907
+    }
+  },
+  "simulation": {
+    "shape": [
+      196,
+      4096
+    ],
+    "min": -360.9303283691406,
+    "max": 371.6261291503906,
+    "mean": 0.008775645750853872,
+    "rms": 15.941105800921543,
+    "abs_percentiles": {
+      "50": 0.0,
+      "90": 12.782093524932861,
+      "95": 26.370662689208984,
+      "99": 73.05732154846169,
+      "99.5": 98.80000267028825,
+      "99.9": 177.65878471374953
+    }
+  },
+  "sampling": {
+    "dt_seconds": 2.5e-08,
+    "samples": 4096,
+    "sound_speed_m_s": 1500.0,
+    "t0_seconds": 0.0
+  },
+  "geometry": {
+    "bounds_m": [
+      -0.02,
+      0.02,
+      -0.02,
+      0.02,
+      -0.02,
+      0.02
+    ],
+    "voxel_origin_xyz_m": [
+      -0.01995,
+      -0.01995,
+      -0.01995
+    ],
+    "voxel_dims_xyz": [
+      400,
+      400,
+      400
+    ],
+    "voxel_spacing_m": 0.0001
+  },
+  "preprocessing": "Already processed RF txt input; no additional filtering, abs, sign flip, offset, decimation or channel normalization. No extra division by 50.",
+  "source_files": {
+    "signal": {
+      "historical_path": "historical:PA-SfM-NC/data/processed_signal_group03_pose000.txt",
+      "sha256": "9d373f22e594addceb3546b891745d1249f219005d2bf916c8828d45de866a97",
+      "basename": "processed_signal_group03_pose000.txt"
+    },
+    "sensors": {
+      "historical_path": "historical:PA-SfM-NC/data/sensor_location_group03_pose000.txt",
+      "sha256": "be60514c0485ab330bfb01cb9b6cd9c76b8b2286377b7f8030297739f3d7cc8f",
+      "basename": "sensor_location_group03_pose000.txt"
+    },
+    "simulation": {
+      "historical_path": "historical:SlingBAG_rapid/data/planar_196_sensor_data.txt",
+      "sha256": "05d86db251482d15b11a6f881e27364a975fa67f3248f652cf305d46a6a5f88d",
+      "basename": "planar_196_sensor_data.txt"
+    }
+  },
+  "coordinate_order": "sensor row i corresponds to signal row i; metres; no transform for pose000",
+  "upstream_limit": "Repository does not supply the raw ADC-to-processed_signal processing chain.",
+  "processed_original": {
+    "shape": [
+      1024,
+      4096
+    ],
+    "min": -2167.875732421875,
+    "max": 2217.723388671875,
+    "mean": -0.000609111690343945,
+    "rms": 61.021927060361314,
+    "abs_percentiles": {
+      "50": 4.387876749038696,
+      "90": 40.85491294860849,
+      "95": 78.73184471130368,
+      "99": 241.99014190673748,
+      "99.5": 355.4842106628408,
+      "99.9": 736.814945129395
+    }
+  },
+  "signal_original_semantics": "Already processed signed RF supplied by the source repository; not raw ADC measurements. The unavailable upstream ADC-to-processed processing chain is not reconstructed here.",
+  "portable_files": {
+    "processed_original": "data/pose000/signal_original.npy",
+    "normalized": "data/pose000/signal_normalized.npy",
+    "sensors": "data/pose000/sensor_locations.npy",
+    "split": "data/pose000/split.npz"
+  }
+}

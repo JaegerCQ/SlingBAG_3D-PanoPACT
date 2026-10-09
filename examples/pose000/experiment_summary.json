@@ -1,0 +1,220 @@
+{
+  "scope": "Historical algorithm-development table; reserved sensors were reused for model selection, not an independent test. Only the final example is bundled.",
+  "historical_source_summary": {
+    "id": "historical:SlingBAG_random_pose000/results/experiment_summary.json",
+    "sha256": "b9305ef7cdf26b127b405cc68e537209ae6c3190d29d39d7027cf31f474ff165"
+  },
+  "cases": [
+    {
+      "name": "random_fine",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.1500000071246177,
+          0.2500000118743628
+        ],
+        "field_grid": 200,
+        "prior_weight": 1.0,
+        "geometry_start_step": 100,
+        "initial_checkpoint_historical": "historical:SlingBAG_random_pose000/results/random_w1_split/initial.pt",
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": false,
+      "selected_step": 200,
+      "selected_train_full_window_mse": 206.01484679307552,
+      "selected_original_128_full_window_mse": 253.2410105535346,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 700,
+      "final_train_full_window_mse": 184.42717951255298,
+      "final_original_128_full_window_mse": 254.29435465705728
+    },
+    {
+      "name": "random_fine_w15",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.1500000071246177,
+          0.2500000118743628
+        ],
+        "field_grid": 200,
+        "prior_weight": 1.5,
+        "geometry_start_step": 100,
+        "initial_checkpoint_historical": "historical:SlingBAG_random_pose000/results/random_w1_split/initial.pt",
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": false,
+      "selected_step": 700,
+      "selected_train_full_window_mse": 219.37340438377888,
+      "selected_original_128_full_window_mse": 249.17876040682836,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 700,
+      "final_train_full_window_mse": 219.37340438377888,
+      "final_original_128_full_window_mse": 249.17876040682836
+    },
+    {
+      "name": "random_narrow",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.09999999747378752,
+          0.2500000118743628
+        ],
+        "field_grid": 288,
+        "prior_weight": 1.5,
+        "geometry_start_step": 100,
+        "initial_checkpoint_historical": "historical:SlingBAG_random_pose000/results/random_narrow_init/initial.pt",
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": false,
+      "selected_step": 500,
+      "selected_train_full_window_mse": 219.47938655328872,
+      "selected_original_128_full_window_mse": 245.12496639779314,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 500,
+      "final_train_full_window_mse": 219.47938655328872,
+      "final_original_128_full_window_mse": 245.12496639779314
+    },
+    {
+      "name": "random_response",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.09999999747378752,
+          0.2500000118743628
+        ],
+        "field_grid": 288,
+        "prior_weight": 1.5,
+        "geometry_start_step": 50,
+        "initial_checkpoint_historical": "historical:SlingBAG_random_pose000/results/random_narrow/selected.pt",
+        "response_kernel_historical": "historical:SlingBAG_random_pose000/validation/random_narrow_response.npy"
+      },
+      "all_sensors_trained": false,
+      "selected_step": 0,
+      "selected_train_full_window_mse": 191.97591491104316,
+      "selected_original_128_full_window_mse": 237.01428128420315,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 200,
+      "final_train_full_window_mse": 168.55709303250117,
+      "final_original_128_full_window_mse": 237.30982701900723
+    },
+    {
+      "name": "random_w03",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.2500000118743628
+        ],
+        "field_grid": 160,
+        "prior_weight": 0.3,
+        "geometry_start_step": 300,
+        "initial_checkpoint_historical": null,
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": false,
+      "selected_step": 0,
+      "selected_train_full_window_mse": 254.34354128754347,
+      "selected_original_128_full_window_mse": 255.6137550114546,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 700,
+      "final_train_full_window_mse": 182.8944030727487,
+      "final_original_128_full_window_mse": 273.07260021080924
+    },
+    {
+      "name": "random_w1",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.2500000118743628
+        ],
+        "field_grid": 160,
+        "prior_weight": 1.0,
+        "geometry_start_step": 300,
+        "initial_checkpoint_historical": null,
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": false,
+      "selected_step": 700,
+      "selected_train_full_window_mse": 233.89973431787283,
+      "selected_original_128_full_window_mse": 253.84540062653426,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 700,
+      "final_train_full_window_mse": 233.89973431787283,
+      "final_original_128_full_window_mse": 253.84540062653426
+    },
+    {
+      "name": "random_w3",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.2500000118743628
+        ],
+        "field_grid": 160,
+        "prior_weight": 3.0,
+        "geometry_start_step": 300,
+        "initial_checkpoint_historical": null,
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": false,
+      "selected_step": 700,
+      "selected_train_full_window_mse": 253.03349051094466,
+      "selected_original_128_full_window_mse": 254.4882579498124,
+      "original_128_role": "reserved_128_tuning_validation",
+      "final_step": 700,
+      "final_train_full_window_mse": 253.03349051094466,
+      "final_original_128_full_window_mse": 254.4882579498124
+    },
+    {
+      "name": "refit_all",
+      "random_only_ancestry": true,
+      "algorithm_variant": {
+        "fixed_sigmas_mm": [
+          0.09999999747378752,
+          0.2500000118743628
+        ],
+        "field_grid": 288,
+        "prior_weight": 1.5,
+        "geometry_start_step": 100,
+        "initial_checkpoint_historical": "historical:SlingBAG_random_pose000/results/random_narrow_init/initial.pt",
+        "response_kernel_historical": null
+      },
+      "all_sensors_trained": true,
+      "selected_step": 500,
+      "selected_train_full_window_mse": 224.36504457511637,
+      "selected_original_128_full_window_mse": 232.9122619043112,
+      "original_128_role": "trained_original_128_subset",
+      "final_step": 500,
+      "final_train_full_window_mse": 224.36504457511637,
+      "final_original_128_full_window_mse": 232.9122619043112
+    }
+  ],
+  "final_after_all_sensor_response_calibration": {
+    "sensor_count": 1024,
+    "sample_count": 4194304,
+    "mse": 199.567425518856,
+    "target_energy": 254.11888231474202,
+    "relative_l2": 0.886189008555371,
+    "prediction_rms": 4.474036607688699,
+    "target_rms": 15.941106684127737,
+    "correlation": 0.5227658135402692,
+    "role": "all_1024_training_and_response_fit_sensors"
+  },
+  "final_original_128_trained_subset_after_calibration": {
+    "sensor_count": 128,
+    "sample_count": 524288,
+    "mse": 213.54936856236196,
+    "target_energy": 255.20032719370343,
+    "relative_l2": 0.9147628784035959,
+    "prediction_rms": 4.038046317605927,
+    "target_rms": 15.974990678986433,
+    "correlation": 0.44922334638925465,
+    "role": "original_128_subset_also_used_for_training_and_response_fit_NOT_validation"
+  },
+  "hybrid_comparator": {
+    "historical_source": "historical:SlingBAG_refined_pose000/results/guarded_response/summary.json",
+    "source_sha256": "1d56228c324dc4efa5503f53c9a7086c3cf5bbae1978a719d66c76b8539aa159",
+    "method": "PA-derived structural initializer plus mass/geometry/field guards and shared response; not random-only",
+    "train_full_window_mse": 150.9603271484375,
+    "tuning_validation_full_window_mse": 229.5211181640625,
+    "comparison_limit": "Different initialization and structural priors; descriptive comparison, not isolated causal A/B or anatomical ground truth."
+  }
+}
